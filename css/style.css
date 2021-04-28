@@ -1,0 +1,480 @@
+/** font-family: 'Roboto', sans-serif; */
+.header {
+    box-shadow: 0 1px 10px 1px rgb(100, 100, 100);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    background: white;
+    z-index: 10;
+}
+.header-container {
+    min-height: 80px;
+    width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo h1 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    color: rgb(40, 115, 255);
+}
+.menu {
+}
+.menu__items {
+}
+li.item {
+    display: inline;
+}
+li.item a {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+}
+.menu-page a {
+    color: rgb(70, 70, 70);
+    padding: 10px;
+}
+.menu-page a:hover {
+    text-decoration: underline;
+    transition: 0.5s;
+}
+.auth-btn a {
+    color: rgb(40, 115, 255);
+    border: solid 2px rgb(40, 115, 255);
+    border-radius: 10px;
+    padding: 10px;
+}
+.auth-btn a:hover {
+    background-color: rgb(40, 115, 255);
+    color: white;
+    transition: 0.5s;
+}
+/*----------------------------------------*/
+.main {
+    margin-top: 200px;
+}
+.container {
+    margin: 0 auto;
+    width: 1000px;
+}
+.carousel-title h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    margin-top: 100px;
+}
+
+/*-------------------------------------*/
+
+/*---------------------------------*/
+.footer {
+    background: rgba(202, 202, 202, 0.521);
+    margin-top: 150px;
+}
+.items {
+    margin-top: 40px;
+}
+.footer__block {
+    display: flex;
+    justify-content: space-between;
+}
+.block__product {
+    max-width: 250px;
+}
+.product__title h4 {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    margin-top: 100px;
+}
+.product__item a {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+}
+.product__item a:hover {
+    text-decoration: underline;
+}
+.block__inform {
+    max-width: 250px;
+}
+.inform__title h4 {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    margin-top: 100px;
+}
+.inform__item a {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+}
+.inform__item a:hover {
+    text-decoration: underline;
+}
+.block__help {
+    max-width: 250px;
+}
+.help__title h4 {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    margin-top: 100px;
+}
+.help__item a {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+}
+.help__item a:hover {
+    text-decoration: underline;
+}
+.block__loyalty {
+    max-width: 250px;
+}
+.loyalty__title h4 {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    margin-top: 100px;
+}
+.loyalty__item p {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+}
+a.loyalty__btn {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: black;
+    padding: 20px 0 20px 0;
+}
+a.loyalty__btn:hover {
+    transition: 0.5s;
+    color: rgb(40, 115, 255);
+}
+.footer__contact {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact__item a i {
+    font-size: 18px;
+    color: black;
+    padding: 20px;
+}
+.contact__item a i:hover {
+    transition: 0.5s;
+    color: rgb(40, 115, 255);
+}
+.author__content p {
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+}
+.footer__logo h5 {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: rgb(40, 115, 255);
+    display: block;
+    padding: 20px 0 20px 0;
+}
+
+/* Скролл */
+::-webkit-scrollbar-button {
+    background-image: url("");
+    background-repeat: no-repeat;
+    width: 5px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-color: rgb(40, 115, 255);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(40, 115, 255);
+}
+
+::-webkit-resizer {
+    background-image: url("");
+    background-repeat: no-repeat;
+    width: 4px;
+    height: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+.blue {
+    color: rgb(40, 115, 255);
+}
+
+/*---------модальное окно------------------*/
+
+/* свойства модального окна по умолчанию */
+.modal {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* цвет фона */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+    pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 30px auto; /* для отображения модального окна по центру */
+    }
+}
+/* свойства для блока, содержащего контент модального окна */
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+@media (min-width: 768px) {
+    .modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+}
+/* свойства для заголовка модального окна */
+
+/* свойства для кнопки "Закрыть" */
+.close {
+    margin-top: 15px;
+    margin-right: 15px;
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.5;
+    text-decoration: none;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus,
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+}
+.modal-title h4 {
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    margin-top: 10px;
+    text-align: center;
+}
+.form form {
+    margin: 40px 0 40px 0;
+}
+.form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 400px;
+}
+p.title-input {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.required {
+    color: red;
+}
+.form-control {
+    width: 400px;
+    height: 50px;
+    border: 1px solid rgba(110, 110, 110, 0.5);
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+}
+input.form-control {
+    padding-left: 10px;
+}
+button.auth-btn {
+    width: 400px;
+    height: 50px;
+    border: 1px solid rgb(40, 115, 255);
+    font-family: "Roboto", sans-serif;
+    color: rgb(40, 115, 255);
+    background-color: white;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 30px;
+}
+button.auth-btn:hover {
+    color: white;
+    background-color: #2873ff;
+    transition: 0.5s;
+}
+
+/*-----------------------------------------*/
+
+/*слайдер*/
+.slider {
+    margin-top: 50px;
+}
+.photo img {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+.name p {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+.market img {
+    width: 1000px;
+    display: block;
+}
+/* адаптив */
+@media screen and (max-width: 1160px) {
+    .header-container {
+        min-height: 80px;
+        width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .container {
+        margin: 0 auto;
+        width: 800px;
+    }
+    .block__product {
+        max-width: 200px;
+    }
+    .product__title h4 {
+        font-size: 14px;
+    }
+    .product__item a {
+        font-size: 10px;
+    }
+    .block__inform {
+        max-width: 200px;
+    }
+    .inform__title h4 {
+        font-size: 14px;
+    }
+    .inform__item a {
+        font-size: 10px;
+    }
+    .block__help {
+        max-width: 200px;
+    }
+    .help__title h4 {
+        font-size: 14px;
+    }
+    .help__item a {
+        font-size: 10px;
+    }
+    .block__loyalty {
+        max-width: 200px;
+    }
+    .loyalty__title h4 {
+        font-size: 14px;
+    }
+    .loyalty__item p {
+        font-size: 10px;
+    }
+    a.loyalty__btn {
+        font-size: 12px;
+    }
+}
+/*-----------------*/

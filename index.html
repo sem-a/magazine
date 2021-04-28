@@ -1,0 +1,267 @@
+<? session_start(); ?>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Какой-то интернет магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/null.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="header__logo">
+                <h1>МАГАЗИН</h1>
+            </div>
+            <? if($_COOKIE['user'] == ''): ?>
+            <div class="menu">
+                <ul class="menu__items">
+                    <li class="item menu-page"><a href="#">Главная</a></li>
+                    <li class="item menu-page"><a href="#">Корзина</a></li>
+                    <li class="item menu-page"><a href="pages/product.php">Каталог</a></li>
+                    <li class="item auth-btn"><a href="#auth">Войти</a></li>
+                    <li class="item auth-btn"><a href="#register">Регистрация</a></li>
+                </ul>
+            </div>
+            <!-- <? else: ?>
+            <div class="menu">
+                <ul class="menu__items">
+                    <li class="item menu-page"><a href="#">Главная</a></li>
+                    <li class="item menu-page"><a href="#">Корзина</a></li>
+                    <li class="item menu-page"><a href="pages/product.php">Каталог</a></li>
+                    <li class="item auth-btn"><a href="#">Профиль</a></li>
+                    <li class="item auth-btn"><a href="/validation-form/exit.php">Выйти</a></li>
+                </ul>
+            </div>
+            <? endif; ?> -->
+        </div>
+    </header>
+
+    <div id="auth" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-title">
+                        <h4>Войти</h4>
+                    </div>
+                    <div class="form">
+                        <form method="POST" class="validation-form" action="validation-form/auth.php">
+                            <div class="form-input">
+                                <p class="title-input">Login: <span class="required">*</span></p>
+                                <input type="text" name="login" class="form-control" id="login">
+                                <p class="title-input">Password: <span class="required">*</span></p>
+                                <input type="password" name="password" id="password" class="form-control">
+                                <button type="submit" class="auth-btn">ВОЙТИ</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="register" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-title">
+                        <h4>Регистрация</h4>
+                    </div>
+                    <div class="form">
+                        <form method="post" action="validation-form/reg.php">
+                            <div class="form-input">
+                                <p class="title-input">Name: <span class="required">*</span></p>
+                                <input type="text" name="name" class="form-control" id="name">
+                                <p class="title-input">E-mail: <span class="required">*</span></p>
+                                <input type="text" name="email" class="form-control" id="email">
+                                <p class="title-input">Login: <span class="required">*</span></p>
+                                <input type="text" name="login" class="form-control" id="login">
+                                <p class="title-input">Password: <span class="required">*</span></p>
+                                <input type="password" name="password" id="password" class="form-control">
+                                <button type="submit" class="auth-btn">Зарегистрироваться</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="container">
+            <div class="slider two">
+                <div class="slide">
+                    <div class="market"><img src="/img/blue.jpg" alt=""></div>
+                </div>
+                <div class="slide">
+                    <div class="market"><img src="/img/red.jpg" alt=""></div>
+                </div>
+            </div>
+            <div class="carousel-title">
+                <h2>Возможно, <span class="blue">вам понравится</span></h2>
+            </div>
+            <div class="slider one">
+                <div class="slide">
+                    <div class="photo"><img src="/img/like.png" alt=""></div>
+
+                </div>
+                <div class="slide">
+                    <div class="photo"><img src="/img/like2.png" alt=""></div>
+
+                </div>
+                <div class="slide">
+                    <div class="photo"><img src="/img/like3.png" alt=""></div>
+
+                </div>
+                <div class="slide">
+                    <div class="photo"><img src="/img/like4.png" alt=""></div>
+
+                </div>
+                <div class="slide">
+                    <div class="photo"><img src="/img/like5.png" alt=""></div>
+
+                </div>
+                <div class="slide">
+                    <div class="photo"><img src="/img/like.png" alt=""></div>
+
+                </div>
+                <div class="slide">
+                    <div class="photo"><img src="/img/like2.png" alt=""></div>
+
+                </div>
+                <div class="slide">
+                    <div class="photo"><img src="/img/like3.png" alt=""></div>
+
+                </div>
+                <div class="slide">
+                    <div class="photo"><img src="/img/like4.png" alt=""></div>
+
+                </div>
+                <div class="slide">
+                    <div class="photo"><img src="/img/like5.png" alt=""></div>
+
+                </div>
+            </div>
+
+            
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__block">
+                <div class="block__product">
+                    <div class="product__title">
+                        <h4>КУПИТЬ</h4>
+                    </div>
+                    <div class="items">
+                        <div class="product__item">
+                            <a href="#">Категория 1</a>
+                        </div>
+                        <div class="product__item">
+                            <a href="#">Категория 2</a>
+                        </div>
+                        <div class="product__item">
+                            <a href="#">Категория 3</a>
+                        </div>
+                        <div class="product__item">
+                            <a href="#">Категория 4</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="block__inform">
+                    <div class="inform__title">
+                        <h4>ИНФОРМАЦИЯ О КОМПАНИИ</h4>
+                    </div>
+                    <div class="items">
+                        <div class="inform__item">
+                            <a href="#">Карьера в МАГАЗИН</a>
+                        </div>
+                        <div class="inform__item">
+                            <a href="#">О группе компаний МАГАЗИН</a>
+                        </div>
+                        <div class="inform__item">
+                            <a href="#">Экологическая и социальная ответственность</a>
+                        </div>
+                        <div class="inform__item">
+                            <a href="#">Пресса</a>
+                        </div>
+                        <div class="inform__item">
+                            <a href="#">Для инвесторов</a>
+                        </div>
+                        <div class="inform__item">
+                            <a href="#">Корпоративная ответственность</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="block__help">
+                    <div class="help__title">
+                        <h4>ПОМОЩЬ</h4>
+                    </div>
+                    <div class="items">
+                        <div class="help__item">
+                            <a href="#">Служба поддержки</a>
+                        </div>
+                        <div class="help__item">
+                            <a href="#">Мой аккаунт</a>
+                        </div>
+                        <div class="help__item">
+                            <a href="#">Найти магазин</a>
+                        </div>
+                        <div class="help__item">
+                            <a href="#">Юридическая информация и политика конфиденциальности</a>
+                        </div>
+                        <div class="help__item">
+                            <a href="#">Контакты</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="block__loyalty">
+                    <div class="loyalty__title">
+                        <h4>СТАТЬ УЧАСТНИКОМ</h4>
+                    </div>
+                    <div class="items">
+                        <div class="loyalty__item">
+                            <p>Станьте участником нашей программы лояльности сейчас и получите скидку 10% на вашу
+                                следующую покупку онлайн!</p>
+                        </div>
+                        <a class="loyalty__btn" href="#">ПРОЧИТАТЬ ПОДРОБНЕЕ...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__contact">
+                <div class="contact__item"><a href="#"><i class="fab fa-facebook-square"></i></a></div>
+                <div class="contact__item"><a href="#"><i class="fab fa-twitter"></i></a></div>
+                <div class="contact__item"><a href="#"><i class="fab fa-instagram"></i></a></div>
+                <div class="contact__item"><a href="#"><i class="fab fa-youtube"></i></a></div>
+                <div class="contact__item"><a href="#"><i class="fab fa-pinterest"></i></a></div>
+            </div>
+            <div class="author__content">
+                <p>Вся информация и материалы, размещенные на данном веб-сайте защищены авторским правом</p>
+            </div>
+            <div class="footer__logo">
+                <h5>МАГАЗИН</h5>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://kit.fontawesome.com/2dbdc418ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="libr/slick/slick.css">
+    <link rel="stylesheet" href="libr/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="libr/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
