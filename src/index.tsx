@@ -6,6 +6,7 @@ import App from './App';
 import Cart from './page/Cart';
 import Account from './page/Account';
 import FavouritePage from './page/FavouritePage';
+import ProductPage from './page/ProductPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -13,9 +14,10 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/account" element={<Account />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/favourite" element={<FavouritePage />} />
+        <Route path="/account" element={<Account />} /> {/* :userid */}
+        <Route path="/cart" element={<Cart />} /> {/* :userid */}
+        <Route path="/favourite" element={<FavouritePage />} /> {/* :userid */}
+        <Route path="/product" element={<ProductPage />} /> {/* :productid */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

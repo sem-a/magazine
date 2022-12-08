@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
 }
@@ -12,6 +13,7 @@ body {
 .title {
   font-size: 24px;
   font-weight: 600;
+  margin-top: 20px;
 }
 button.button {
   font-size: 14px;
@@ -21,6 +23,17 @@ button.button {
 }
 button.button:hover {
   background-color: #75ce6c;
+  transition: all 0.3s ease .0s;
+}
+.link__home p {
+  margin-top: 10px;
+  width: 100px;
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease .0s;
+}
+.link__home p:hover {
+  color: red;
   transition: all 0.3s ease .0s;
 }
 
@@ -73,6 +86,9 @@ h1.logo {
   padding: 80px 0px;
   background-color: #F9F9FA;
 }
+.catalog__container {
+  margin-top: 40px;
+}
 /*----------*/
 
 /* Card */
@@ -116,3 +132,124 @@ h1.logo {
   right: 10px;
 }
 /*---------*/
+
+/* Account */ 
+.account {
+  padding: 80px 0px;
+}
+.personal__data-block {
+  margin-top: 20px;
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgb(226, 226, 226) 0px 0px 20px;
+}
+.personal__data-container {
+  padding: 20px 40px;
+}
+.user {
+  display: flex;
+  align-items: center;
+}
+.user__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgb(236, 236, 236);
+  position: relative;
+}
+.user__avatar p {
+  font-size: 32px;
+  font-weight: 600;
+  color: #777;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.user__name {
+  margin-left: 30px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.user__date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.item__title p {
+  color: #777;
+}
+.item__user p {
+  margin-top: 5px;
+}
+/*-----------------------*/
+/* Cart */
+.cart {
+  padding: 80px 0px;
+}
+.cart__catalog {
+  margin-top: 40px;
+}
+/*-----------------------*/
+/* FavouritePage */
+.favourite__page {
+  padding: 80px 0px;
+  background-color: #F9F9FA;
+}
+/*-----------------------*/
+/* ProductPage */
+ .product {
+  padding: 80px 0px;  
+}
+.product__items {
+  margin-top: 40px;
+}
+ .product__item-img img{
+  width: 250px;
+  height: 300px;
+}
+.product__items {
+  display: flex;
+  align-items: flex-start;
+}
+.product__item-description {
+  position: relative;
+  margin-left: 100px;
+}
+.product__button {
+  margin-top: 20px;
+}
+.product__price {
+  margin-top: 50px;
+}
+.product__price p {
+  font-size: 24px;
+  font-weight: 700;
+}
+/*-----------------------*/
+/* CardCart */
+.card__cart {
+  margin-top: 20px;
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgb(226, 226, 226) 0px 0px 20px;
+}
+.card__cart-wrapper {
+  padding: 20px 40px;
+  position: relative;
+}
+.card__cart-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__cart-button {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+/*-----------------------*/
