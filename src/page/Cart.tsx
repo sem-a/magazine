@@ -9,14 +9,14 @@ function Cart() {
       <Header />
       <div className="cart">
         <div className="container">
-          <div className="cart__title">
-            <h2 className="title">Корзина</h2>
-          </div>
-          <Link to="/">
+        <Link to="/">
             <div className="link__home">
               <p>На главную</p>
             </div>
           </Link>
+          <div className="cart__title">
+            <h2 className="title">Корзина</h2>
+          </div>
           <div className="cart__catalog">
             <CardCart />
           </div>

@@ -18,7 +18,7 @@ function Card() {
             <h3>Какой-то товар</h3>
           </div>
           <div className="card__button">
-            <button className="button">В КОРЗИНУ</button>
+            <div className="button">В КОРЗИНУ</div>
           </div>
         </div>
       </div>

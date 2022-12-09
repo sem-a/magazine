@@ -25,6 +25,17 @@ button.button:hover {
   background-color: #75ce6c;
   transition: all 0.3s ease .0s;
 }
+div.button {
+  font-size: 14px;
+  background-color: #7FE175;
+  padding: 10px 20px;
+  transition: all 0.3s ease .0s;
+  cursor: pointer;
+}
+div.button:hover {
+  background-color: #75ce6c;
+  transition: all 0.3s ease .0s;
+}
 .link__home p {
   margin-top: 10px;
   width: 100px;
@@ -36,6 +47,44 @@ button.button:hover {
   color: red;
   transition: all 0.3s ease .0s;
 }
+label.form__label {
+  font-size: 14px;
+  color: black;
+}
+input.form__input {
+  font-size: 14px;
+  color: black;
+  width: 270px;
+  height: 38px;
+  border-radius: 3px;
+  border: solid rgb(172, 172, 172) 1px;
+  padding: 6px 12px;
+}
+.form__item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.form__item button {
+  width: 270px;
+}
+.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.form__radio {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.form__radio label {
+  padding-left: 5px;
+}
+label.form__label {
+  margin-bottom: 5px;
+}
+
 
 /* Header */
 .header {
@@ -97,6 +146,12 @@ h1.logo {
   height: 380px;
   background-color: white;
   position: relative;
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+}
+.card:hover {
+  transition: all 0.5s ease 0s;
+  transform: translateY(-5px);
 }
 .card__wrapper {
   padding: 10px;
@@ -275,4 +330,18 @@ h1.logo {
 .info__description {
   margin-top: 20px;
 }
+/*-----------------------*/
+/* Auth */
+.auth__flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.auth__content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /*-----------------------*/

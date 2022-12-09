@@ -8,14 +8,14 @@ function ProductPage() {
       <Header />
       <div className="product">
         <div className="container">
-          <div className="product__title">
-            <h2 className="title">Какой-то товар</h2>
-          </div>
           <Link to="/">
             <div className="link__home">
               <p>На главную</p>
             </div>
           </Link>
+          <div className="product__title">
+            <h2 className="title">Какой-то товар</h2>
+          </div>
           <div className="product__items">
             <div className="product__item-img">
               <img src={require('../img/no-image.jpg')} alt="product img" />
