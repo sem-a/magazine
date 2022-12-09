@@ -252,4 +252,27 @@ h1.logo {
   bottom: 20px;
   right: 40px;
 }
+.info__title p {
+  font-size: 24px;
+  font-weight: 700;
+}
+.info__price {
+  margin-top: 20px;
+}
+.info__price p {
+  font-size: 24px;
+  font-weight: 700;
+}
+.card__cart-img img {
+  width: 200px;
+  height: 245px;
+}
+.card__cart-info {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.info__description {
+  margin-top: 20px;
+}
 /*-----------------------*/

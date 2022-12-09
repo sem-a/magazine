@@ -24,6 +24,9 @@ function CardCart() {
                 что вам придется заплатить налог с дохода от продажи. Как это сделать? Содержание:
                 Сдать на утилизация
               </p>
+              <div className="info__price">
+                <p>5000 руб.</p>
+              </div>
             </div>
           </div>
           <div className="card__cart-count">
