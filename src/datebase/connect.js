@@ -1,26 +1,23 @@
 const myDateBase = require('mysql2');
 
-const connection = myDateBase.createConnection({
-  host: 'localhost',
-  user: 'root',
-  database: 'magazin',
-  password: '',
-});
+module.exports = {
+  connect: () => {
+    const connection = myDateBase.createConnection({
+      host: 'localhost',
+      user: 'root',
+      database: 'magazin',
+      password: '',
+    });
+    return connection
+  },
 
-connection.connect(function (err) {
-  if (err) {
-    return console.error('Ошибка: ' + err.message);
-  } else {
-    console.log('Подключение к серверу MySQL успешно установлено');
+  end: (connection) => {
+    connection.end((err) => {
+      if (err) {
+        return console.log('Ошибка: ' + err.message);
+      } else {
+        console.log('Соединение закрыто');
+      }
+    })
   }
-});
-
-
-
-connection.end((err) => {
-  if (err) {
-    return console.log('Ошибка: ' + err.message);
-  } else {
-    console.log('Соединение закрыто');
-  }
-})
+}

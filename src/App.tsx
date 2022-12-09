@@ -7,6 +7,9 @@ import './css/style.css';
 
 function App() {
   
+  useEffect( () => {
+  });
+
   return (
     <div>
       <Header />
