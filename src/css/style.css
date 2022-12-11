@@ -134,9 +134,21 @@ h1.logo {
 .catalog {
   padding: 80px 0px;
   background-color: #F9F9FA;
+  min-height: 100vh;
 }
 .catalog__container {
   margin-top: 40px;
+}
+.catalog__null {
+  font-size: 24px;
+  text-align: center;
+}
+.catalog__grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 0));
 }
 /*----------*/
 
@@ -158,6 +170,8 @@ h1.logo {
 }
 .card__content {
   margin-top: 20px;
+  text-decoration: none;
+  color: black;
 }
 .card__content-flex {
   display: flex;

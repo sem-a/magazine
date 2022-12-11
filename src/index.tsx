@@ -17,7 +17,7 @@ root.render(
         <Route path="/account" element={<Account />} /> {/* :userid */}
         <Route path="/cart" element={<Cart />} /> {/* :userid */}
         <Route path="/favourite" element={<FavouritePage />} /> {/* :userid */}
-        <Route path="/product" element={<ProductPage />} /> {/* :productid */}
+        <Route path="/product/:id" element={<ProductPage />} /> {/* :productid */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
