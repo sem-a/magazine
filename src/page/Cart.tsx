@@ -1,9 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import CardCart from '../components/CardCart';
+import { Link, useLocation } from 'react-router-dom';
+import CardCartList from '../components/CardCart';
 import Header from '../components/Header';
 
 function Cart() {
+
+  const location = useLocation();
+
   return (
     <div>
       <Header />
@@ -18,7 +21,7 @@ function Cart() {
             <h2 className="title">Корзина</h2>
           </div>
           <div className="cart__catalog">
-            <CardCart />
+            <CardCartList products={location.state.productsCart} />
           </div>
         </div>
       </div>

@@ -1,9 +1,10 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 function Header() {
+
   return (
     <div className="header">
       <div className="container">
@@ -20,7 +21,7 @@ function Header() {
               </Link>
             </div>
             <div className="header__favourite">
-              <Link to="/favourite">
+              <Link to="/">
                 <div className="header__icon">
                   <FontAwesomeIcon icon={regular('heart')} />
                 </div>

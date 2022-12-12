@@ -3,12 +3,13 @@ import CardList from './Card';
 
 function Catalog() {
   
-  const [products, setProducts] = useState<Array<Object>>([])
+  const [products, setProducts] = useState<Array<Object>>([]);
+
 
   const getProduct = async() => {
-    const dataProducts = await fetch('http://localhost:3001/api/product')
+    const dataProducts = await fetch('http://localhost:3001/products')
     const products = await dataProducts.json();
-    setProducts(products);
+    setProducts(products["values"]);
   }
 
   useEffect( () => {

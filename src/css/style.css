@@ -212,6 +212,7 @@ h1.logo {
   background-color: white;
   border-radius: 20px;
   box-shadow: rgb(226, 226, 226) 0px 0px 20px;
+  position: relative;
 }
 .personal__data-container {
   padding: 20px 40px;
@@ -253,6 +254,11 @@ h1.logo {
 }
 .item__user p {
   margin-top: 5px;
+}
+.exit__button {
+  position: absolute;
+  top: 20px;
+  right: 40px;
 }
 /*-----------------------*/
 /* Cart */

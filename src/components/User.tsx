@@ -1,6 +1,13 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
-function User() {
+function User(props: any) {
+
+  const exitAcc = () => {
+    console.log(props.user)
+    localStorage.removeItem('user');
+    props.setIsAuth(false);
+  }
+
   return (
     <div>
       <div className="personal__date-title">
@@ -10,10 +17,10 @@ function User() {
         <div className="personal__data-container">
           <div className="user">
             <div className="user__avatar">
-              <p>A</p>
+              <p>{props.user.name[0]}</p>
             </div>
             <div className="user__name">
-              <p>Алексей</p>
+              <p>{props.user.name}</p>
             </div>
           </div>
           <div className="user__date">
@@ -22,7 +29,7 @@ function User() {
                 <p>E-mail:</p>
               </div>
               <div className="item__user">
-                <p>aleksey.i99@mail.ru</p>
+                <p>{props.user.email}</p>
               </div>
             </div>
 
@@ -31,7 +38,7 @@ function User() {
                 <p>Телефон:</p>
               </div>
               <div className="item__user">
-                <p>+7 (952) 789-99-89</p>
+                <p>{props.user.phone}</p>
               </div>
             </div>
 
@@ -40,7 +47,7 @@ function User() {
                 <p>Пол:</p>
               </div>
               <div className="item__user">
-                <p>Муж.</p>
+                <p>{props.user.gender}</p>
               </div>
             </div>
 
@@ -49,13 +56,18 @@ function User() {
                 <p>Сумма выкупа:</p>
               </div>
               <div className="item__user">
-                <p>47 923 руб.</p>
+                <p>{props.user.amount}</p>
               </div>
             </div>
 
             <div className="user__date-item">
               <div className="edit__button">
-                <button className="button">Изменить</button>
+                <div className="button">Изменить</div>
+              </div>
+            </div>
+            <div className="user__date-item">
+              <div className="exit__button">
+                <div onClick={exitAcc} className="button">ВЫЙТИ</div>
               </div>
             </div>
           </div>

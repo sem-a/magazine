@@ -2,7 +2,15 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 
-function CardCart() {
+interface Product {
+  id: number;
+  nameProduct: string;
+  description: string;
+  price: string;
+  image: object;
+}
+
+function CardCart(props: Product) {
   return (
     <div className="card__cart">
       <div className="card__cart-wrapper">
@@ -41,4 +49,24 @@ function CardCart() {
   );
 }
 
-export default CardCart;
+function CardCartList(props: any) {
+  if (props.products != (null || undefined)) {
+    const productsCartList = props.products.map((product: any) => {
+      return (
+        <CardCart
+          key={product.id}
+          id={product.id}
+          nameProduct={product.name_product}
+          description={product.description}
+          price={product.price}
+          image={product.image}
+        />
+      );
+    });
+    return <div className="catalog__grid">{productsCartList}</div>;
+  } else {
+    return <div>Здесь ничего нет</div>;
+  }
+}
+
+export default CardCartList;
