@@ -32,9 +32,9 @@ function Auth() {
       );
       localStorage.setItem('user', JSON.stringify(userTemp));
       setIsAuth(true);
-      console.log('Пользователь успешно добавлен'); 
+      alert('Пользователь успешно добавлен'); 
     } catch {
-      console.log('Что-то пошло не так')
+      alert('Что-то пошло не так')
     }
   };
 
@@ -51,7 +51,7 @@ function Auth() {
       setUser(userTemp["values"][0]);
       localStorage.setItem('user', JSON.stringify(userTemp['values'][0]));
     } else {
-      console.log('Ошибка авторизации');
+      alert('Ошибка авторизации');
     }
   };
 
@@ -93,7 +93,7 @@ function Auth() {
                       Пароль:
                     </label>
                     <input
-                      type="text"
+                      type="password"
                       name="passwordAuth"
                       id="passwordAuth"
                       className="form__input"

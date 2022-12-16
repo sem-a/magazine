@@ -320,7 +320,7 @@ h1.logo {
 .card__cart-flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .card__cart-button {
   position: absolute;
@@ -349,6 +349,16 @@ h1.logo {
 }
 .info__description {
   margin-top: 20px;
+}
+.card__cart-delete{
+ position: absolute;
+ top: 20px;
+ right: 40px;
+ cursor: pointer;
+}
+.card__cart-delete:hover {
+  text-decoration: underline;
+  color: red;
 }
 /*-----------------------*/
 /* Auth */

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 
@@ -11,6 +11,11 @@ interface Product {
 }
 
 function CardCart(props: Product) {
+
+  const deleteCart = async() => {
+    await fetch(`http://localhost:3001/cart/delete?productId=${props.id}`);
+  }
+
   return (
     <div className="card__cart">
       <div className="card__cart-wrapper">
@@ -20,20 +25,12 @@ function CardCart(props: Product) {
           </div>
           <div className="card__cart-info">
             <div className="info__title">
-              <p>Какой-то товар</p>
+              <p>{props.nameProduct}</p>
             </div>
             <div className="info__description">
-              <p>
-                Какой-то товар, который не пользуется спросом, не продается и не приносит прибыль.
-                Но мы не можем просто так его выкинуть. Ведь он лежит мертвым грузом и занимает
-                место. Это не только может привести к порче товара, но и создать пожароопасную
-                ситуацию в магазине. Для того чтобы избавиться от ненужного товара, существует два
-                способа: сдать его на утилизацию или продать его. Если вы решили продать, то учтите,
-                что вам придется заплатить налог с дохода от продажи. Как это сделать? Содержание:
-                Сдать на утилизация
-              </p>
+              <p>{props.description}</p>
               <div className="info__price">
-                <p>5000 руб.</p>
+                <p>{props.price} руб.</p>
               </div>
             </div>
           </div>
@@ -43,19 +40,40 @@ function CardCart(props: Product) {
           <div className="card__cart-button">
             <button className="button">КУПИТЬ</button>
           </div>
+          <div className="card__cart-delete" onClick={deleteCart}>
+            <p>Удалить</p>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-function CardCartList(props: any) {
-  if (props.products != (null || undefined)) {
-    const productsCartList = props.products.map((product: any) => {
+function CardCartList() {
+  const [products, setProducts] = useState([]);
+
+  const getCart = async () => {
+    const cartIdDate = localStorage.getItem('user');
+    if (cartIdDate) {
+      const cartId = JSON.parse(cartIdDate).id;
+      const cartUserData = await fetch(`http://localhost:3001/cart/get?id_cart=${cartId}`);
+      const cartUser = await cartUserData.json();
+      setProducts(cartUser['values']);
+    } else {
+      console.log('ошибка чтения корзины');
+    }
+  };
+
+  useEffect(() => {
+    getCart();
+  });
+
+  if (products != (null || undefined)) {
+    const productsCartList = products.map((product: any) => {
       return (
         <CardCart
-          key={product.id}
-          id={product.id}
+          key={product.id_product}
+          id={product.id_product}
           nameProduct={product.name_product}
           description={product.description}
           price={product.price}
@@ -63,7 +81,7 @@ function CardCartList(props: any) {
         />
       );
     });
-    return <div className="catalog__grid">{productsCartList}</div>;
+    return <div>{productsCartList}</div>;
   } else {
     return <div>Здесь ничего нет</div>;
   }

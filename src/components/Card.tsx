@@ -10,6 +10,23 @@ interface Product {
 }
 
 function Card(props: Product) {
+
+  const addCart = async() => {
+    const userData = localStorage.getItem('user');
+    if(userData) {
+      const user = JSON.parse(userData);
+      const isCartDate = await fetch(`http://localhost:3001/cart/find?productId=${props.id}&userId=${user.id}`)
+      const isCart = await isCartDate.json();
+      if(isCart['values'].length == 0) {
+        await fetch(`http://localhost:3001/cart/add?userId=${user.id}&productId=${props.id}`);
+      } else {
+        alert('Товар уже в корзине');
+      }
+    } else {
+      alert('Ошибка добавления в корзину');
+    }
+  }
+
   const key = props.id;
   return (
     <div className="card">
@@ -39,7 +56,7 @@ function Card(props: Product) {
           </div>
         </Link>
         <div className="card__button">
-          <div className="button">В КОРЗИНУ</div>
+          <div onClick={addCart} className="button">В КОРЗИНУ</div>
         </div>
       </div>
     </div>

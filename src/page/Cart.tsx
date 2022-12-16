@@ -21,7 +21,7 @@ function Cart() {
             <h2 className="title">Корзина</h2>
           </div>
           <div className="cart__catalog">
-            <CardCartList products={location.state.productsCart} />
+            <CardCartList />
           </div>
         </div>
       </div>

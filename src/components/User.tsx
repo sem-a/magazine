@@ -61,9 +61,9 @@ function User(props: any) {
             </div>
 
             <div className="user__date-item">
-              <div className="edit__button">
+              {/* <div className="edit__button">
                 <div className="button">Изменить</div>
-              </div>
+              </div> */}
             </div>
             <div className="user__date-item">
               <div className="exit__button">
